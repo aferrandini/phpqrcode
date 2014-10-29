@@ -128,9 +128,6 @@ class QRencode {
 
             QRimage::png($tab, $outfile, min(max(1, $this->size), $maxSize), $this->margin,$saveandprint);
         } catch (Exception $e) {
-            echo $e->getMessage();
-            die();
-
             QRtools::log($outfile, $e->getMessage());
         }
     }
